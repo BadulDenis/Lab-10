@@ -25,12 +25,17 @@ namespace Lab_10
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             g = CreateGraphics();
-            g.Clear(Color.AliceBlue);
-            for (int i = 0; i < 50; i++)
-                g.DrawLine(new Pen(Brushes.Red, 3),
-                0, 4 * i + 20, 500, 4 * i + 20);
-            SolidBrush B = new SolidBrush(Color.DarkBlue);
-            g.FillRectangle(B, 100, 100, 100, 100);
+            g.Clear(Color.White);
+            SolidBrush A = new SolidBrush(Color.Red);
+            g.FillEllipse(A, 110, 70, 400, 400);
+            SolidBrush B = new SolidBrush(Color.Black);
+            g.FillRectangle(B, 200, 100, 20, 1000);
+            g.FillRectangle(B, 0, 300, 1000, 100);
+            g.FillRectangle(B, 400, 100, 20, 1000);
+            g.FillRectangle(B, 160, 150, 300, 20);
+            g.FillRectangle(B, 300, 100, 20, 50);
+            Pen P = new Pen(Color.Black,30);
+            g.DrawArc(P, 160, 30, 300, 80, 0, 180);
         }
     }
 }
